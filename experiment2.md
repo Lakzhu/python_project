@@ -6,9 +6,9 @@
 
 姓名： 朱华畅
 
-Github地址：<https://github.com/yourusername/python_course>
+Github地址：<https://github.com/Lakzhu/python_project>
 
-CodeWars地址：<https://www.codewars.com/users/yourusername>
+CodeWars地址：<https://www.codewars.com/users/Lak%E6%9C%B1>
 
 ---
 
@@ -154,7 +154,6 @@ def nearest_sq(n):
     if a*a == n:
         return n
     b = (a+1)//1
-    a = a//1
     if n - a*a < b*b - n:
         return a*a
     elif n - a*a > b*b - n:
@@ -163,7 +162,13 @@ def nearest_sq(n):
 
 ```mermaid
 flowchart LR
-    A[Start] --> []
+    A[f等于n开平方] --> B[a等于取整]
+    B --> C{a*a是否等于n？}
+    C -->|是| D[返回n]
+    C -->|否| E[b等于a+1除以1]
+    E --> F{n-a*a是否小于b*b-n？}
+    F -->|是| G[返回a*a]
+    F -->|否| H[返回b*b]
 ```
 
 ![Alt text](image-4.png)
@@ -218,9 +223,30 @@ def even_or_odd(number):
 请使用自己的语言并使用尽量简短代码示例回答下面的问题，这些问题将在实验检查时用于提问和答辩以及实际的操作。
 
 1. Python中的简单数据类型有那些？我们可以对这些数据类型做哪些操作？
+
+```bash
+    字符串;改变大小写字符串比对
+    整数;基本算数运算;取余;取整;比较大小;
+    浮点数;基本算数运算；取余取整比较大小;
+    布尔值;当做true和false使用;
+```
+
 2. 为什么说Python中的变量都是标签？
+
+```bash
+    因为python的变量创建都是创建在内存中的，然后变量名只是用与指向那个内存中的，你可用a和b同时等于一个数，然后查看他们的地址会发现他们是一样的，所以说是标签
+```
+
 3. 有哪些方法可以提高Python代码的可读性？
+
+```bash
+    遵循python之禅，多做注释。
+```
 
 ## 实验总结
 
 总结一下这次实验你学习和使用到的知识，例如：编程工具的使用、数据结构、程序语言的语法、算法、编程技巧、编程思想。
+
+```bash
+    这次实验让我熟悉了基本的python语言，练习了python语法的使用，如while循环，for循环，if条件语句.....熟悉了如何绘制基本的流程图。
+```
